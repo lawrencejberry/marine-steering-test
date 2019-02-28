@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Marine_Steering_Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ebi-GH-C9B">
+                                <rect key="frame" x="50" y="20" width="78" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="78" id="roW-Wq-bNp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Start"/>
+                                <state key="selected" title="Stop"/>
+                                <connections>
+                                    <action selector="startStopTapped:" destination="BYZ-38-t0r" eventType="touchDown" id="RJg-pB-0PM"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter file name here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="84m-Rf-Sv4">
+                                <rect key="frame" x="178" y="20" width="469" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fD5-cp-aow">
+                                <rect key="frame" x="50" y="99" width="79" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Button 1"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zZF-IX-0eG">
+                                <rect key="frame" x="169" y="99" width="81" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Button 2"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJ5-qU-sdW">
+                                <rect key="frame" x="290" y="99" width="82" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Button 3"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x8z-OY-kKd">
+                                <rect key="frame" x="534" y="99" width="82" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Button 5"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iyS-A5-dc8">
+                                <rect key="frame" x="412" y="99" width="82" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Button 4"/>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-30" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="Mek-vM-tTR">
+                                <rect key="frame" x="38" y="305" width="591" height="31"/>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="TDD-BE-n0F"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="nJ5-qU-sdW" firstAttribute="leading" secondItem="zZF-IX-0eG" secondAttribute="trailing" constant="40" id="59W-b6-v1C"/>
+                            <constraint firstItem="nJ5-qU-sdW" firstAttribute="centerY" secondItem="zZF-IX-0eG" secondAttribute="centerY" id="ALe-Ap-iO7"/>
+                            <constraint firstItem="iyS-A5-dc8" firstAttribute="leading" secondItem="nJ5-qU-sdW" secondAttribute="trailing" constant="40" id="Oxm-Qr-0Ji"/>
+                            <constraint firstItem="zZF-IX-0eG" firstAttribute="centerY" secondItem="fD5-cp-aow" secondAttribute="centerY" id="SMv-Pu-XnD"/>
+                            <constraint firstItem="Ebi-GH-C9B" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Shu-ge-p2e"/>
+                            <constraint firstItem="x8z-OY-kKd" firstAttribute="leading" secondItem="iyS-A5-dc8" secondAttribute="trailing" constant="40" id="V4I-Bh-Nyx"/>
+                            <constraint firstItem="Ebi-GH-C9B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Wnh-1r-g18"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="84m-Rf-Sv4" secondAttribute="trailing" constant="20" id="Y4h-pf-SWV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Mek-vM-tTR" secondAttribute="bottom" constant="40" id="YT7-Ra-1bu"/>
+                            <constraint firstItem="fD5-cp-aow" firstAttribute="top" secondItem="Ebi-GH-C9B" secondAttribute="bottom" constant="40" id="Yk4-CF-YOW"/>
+                            <constraint firstItem="Mek-vM-tTR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cIY-9v-NdO"/>
+                            <constraint firstItem="Mek-vM-tTR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="f9y-Lw-Do8"/>
+                            <constraint firstItem="84m-Rf-Sv4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="fB8-nM-QLO"/>
+                            <constraint firstItem="84m-Rf-Sv4" firstAttribute="leading" secondItem="Ebi-GH-C9B" secondAttribute="trailing" constant="50" id="iVf-4d-dNX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mek-vM-tTR" secondAttribute="trailing" constant="40" id="lVE-wj-BWD"/>
+                            <constraint firstItem="fD5-cp-aow" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="mKL-5H-Qb6"/>
+                            <constraint firstItem="x8z-OY-kKd" firstAttribute="centerY" secondItem="iyS-A5-dc8" secondAttribute="centerY" id="mqA-jB-Try"/>
+                            <constraint firstItem="zZF-IX-0eG" firstAttribute="leading" secondItem="fD5-cp-aow" secondAttribute="trailing" constant="40" id="rOO-0k-jLh"/>
+                            <constraint firstItem="iyS-A5-dc8" firstAttribute="centerY" secondItem="nJ5-qU-sdW" secondAttribute="centerY" id="wEX-lK-eXj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="Button1" destination="fD5-cp-aow" id="ocR-vT-8cI"/>
+                        <outlet property="Button2" destination="zZF-IX-0eG" id="J3T-Pv-uSV"/>
+                        <outlet property="Button3" destination="nJ5-qU-sdW" id="9bu-8J-CB3"/>
+                        <outlet property="Button4" destination="iyS-A5-dc8" id="8Zr-lc-s9V"/>
+                        <outlet property="Button5" destination="x8z-OY-kKd" id="iTL-B1-3aQ"/>
+                        <outlet property="fileTextField" destination="84m-Rf-Sv4" id="9eY-MR-POW"/>
+                        <outlet property="rudderAngleSlider" destination="Mek-vM-tTR" id="thJ-6C-Ym7"/>
+                        <outlet property="startStopButton" destination="Ebi-GH-C9B" id="7rL-Jh-dg7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.523238380809602" y="28"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,595 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2180036D2225909C00B53556 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2180036C2225909C00B53556 /* AppDelegate.swift */; };
+		2180036F2225909C00B53556 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2180036E2225909C00B53556 /* ViewController.swift */; };
+		218003722225909C00B53556 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 218003702225909C00B53556 /* Main.storyboard */; };
+		218003742225909E00B53556 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 218003732225909E00B53556 /* Assets.xcassets */; };
+		218003772225909E00B53556 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 218003752225909E00B53556 /* LaunchScreen.storyboard */; };
+		218003822225909E00B53556 /* Marine_Steering_TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218003812225909E00B53556 /* Marine_Steering_TestTests.swift */; };
+		2180038D2225909E00B53556 /* Marine_Steering_TestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2180038C2225909E00B53556 /* Marine_Steering_TestUITests.swift */; };
+		21D8332D2227051B0050496A /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D8332C2227051B0050496A /* LocationService.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2180037E2225909E00B53556 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 218003612225909C00B53556 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 218003682225909C00B53556;
+			remoteInfo = "Marine Steering Test";
+		};
+		218003892225909E00B53556 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 218003612225909C00B53556 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 218003682225909C00B53556;
+			remoteInfo = "Marine Steering Test";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		218003692225909C00B53556 /* Marine Steering Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Marine Steering Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2180036C2225909C00B53556 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2180036E2225909C00B53556 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		218003712225909C00B53556 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		218003732225909E00B53556 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		218003762225909E00B53556 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		218003782225909E00B53556 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2180037D2225909E00B53556 /* Marine Steering TestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Marine Steering TestTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		218003812225909E00B53556 /* Marine_Steering_TestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marine_Steering_TestTests.swift; sourceTree = "<group>"; };
+		218003832225909E00B53556 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		218003882225909E00B53556 /* Marine Steering TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Marine Steering TestUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2180038C2225909E00B53556 /* Marine_Steering_TestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marine_Steering_TestUITests.swift; sourceTree = "<group>"; };
+		2180038E2225909E00B53556 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21D8332C2227051B0050496A /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		218003662225909C00B53556 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2180037A2225909E00B53556 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		218003852225909E00B53556 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		218003602225909C00B53556 = {
+			isa = PBXGroup;
+			children = (
+				2180036B2225909C00B53556 /* Marine Steering Test */,
+				218003802225909E00B53556 /* Marine Steering TestTests */,
+				2180038B2225909E00B53556 /* Marine Steering TestUITests */,
+				2180036A2225909C00B53556 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2180036A2225909C00B53556 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				218003692225909C00B53556 /* Marine Steering Test.app */,
+				2180037D2225909E00B53556 /* Marine Steering TestTests.xctest */,
+				218003882225909E00B53556 /* Marine Steering TestUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2180036B2225909C00B53556 /* Marine Steering Test */ = {
+			isa = PBXGroup;
+			children = (
+				2180036C2225909C00B53556 /* AppDelegate.swift */,
+				2180036E2225909C00B53556 /* ViewController.swift */,
+				218003702225909C00B53556 /* Main.storyboard */,
+				218003732225909E00B53556 /* Assets.xcassets */,
+				218003752225909E00B53556 /* LaunchScreen.storyboard */,
+				218003782225909E00B53556 /* Info.plist */,
+				21D8332C2227051B0050496A /* LocationService.swift */,
+			);
+			path = "Marine Steering Test";
+			sourceTree = "<group>";
+		};
+		218003802225909E00B53556 /* Marine Steering TestTests */ = {
+			isa = PBXGroup;
+			children = (
+				218003812225909E00B53556 /* Marine_Steering_TestTests.swift */,
+				218003832225909E00B53556 /* Info.plist */,
+			);
+			path = "Marine Steering TestTests";
+			sourceTree = "<group>";
+		};
+		2180038B2225909E00B53556 /* Marine Steering TestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2180038C2225909E00B53556 /* Marine_Steering_TestUITests.swift */,
+				2180038E2225909E00B53556 /* Info.plist */,
+			);
+			path = "Marine Steering TestUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		218003682225909C00B53556 /* Marine Steering Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 218003912225909E00B53556 /* Build configuration list for PBXNativeTarget "Marine Steering Test" */;
+			buildPhases = (
+				218003652225909C00B53556 /* Sources */,
+				218003662225909C00B53556 /* Frameworks */,
+				218003672225909C00B53556 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Marine Steering Test";
+			productName = "Marine Steering Test";
+			productReference = 218003692225909C00B53556 /* Marine Steering Test.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2180037C2225909E00B53556 /* Marine Steering TestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 218003942225909E00B53556 /* Build configuration list for PBXNativeTarget "Marine Steering TestTests" */;
+			buildPhases = (
+				218003792225909E00B53556 /* Sources */,
+				2180037A2225909E00B53556 /* Frameworks */,
+				2180037B2225909E00B53556 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2180037F2225909E00B53556 /* PBXTargetDependency */,
+			);
+			name = "Marine Steering TestTests";
+			productName = "Marine Steering TestTests";
+			productReference = 2180037D2225909E00B53556 /* Marine Steering TestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		218003872225909E00B53556 /* Marine Steering TestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 218003972225909E00B53556 /* Build configuration list for PBXNativeTarget "Marine Steering TestUITests" */;
+			buildPhases = (
+				218003842225909E00B53556 /* Sources */,
+				218003852225909E00B53556 /* Frameworks */,
+				218003862225909E00B53556 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2180038A2225909E00B53556 /* PBXTargetDependency */,
+			);
+			name = "Marine Steering TestUITests";
+			productName = "Marine Steering TestUITests";
+			productReference = 218003882225909E00B53556 /* Marine Steering TestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		218003612225909C00B53556 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Lawrence Berry";
+				TargetAttributes = {
+					218003682225909C00B53556 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					2180037C2225909E00B53556 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 218003682225909C00B53556;
+					};
+					218003872225909E00B53556 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 218003682225909C00B53556;
+					};
+				};
+			};
+			buildConfigurationList = 218003642225909C00B53556 /* Build configuration list for PBXProject "Marine Steering Test" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 218003602225909C00B53556;
+			productRefGroup = 2180036A2225909C00B53556 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				218003682225909C00B53556 /* Marine Steering Test */,
+				2180037C2225909E00B53556 /* Marine Steering TestTests */,
+				218003872225909E00B53556 /* Marine Steering TestUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		218003672225909C00B53556 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				218003772225909E00B53556 /* LaunchScreen.storyboard in Resources */,
+				218003742225909E00B53556 /* Assets.xcassets in Resources */,
+				218003722225909C00B53556 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2180037B2225909E00B53556 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		218003862225909E00B53556 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		218003652225909C00B53556 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2180036F2225909C00B53556 /* ViewController.swift in Sources */,
+				21D8332D2227051B0050496A /* LocationService.swift in Sources */,
+				2180036D2225909C00B53556 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		218003792225909E00B53556 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				218003822225909E00B53556 /* Marine_Steering_TestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		218003842225909E00B53556 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2180038D2225909E00B53556 /* Marine_Steering_TestUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2180037F2225909E00B53556 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 218003682225909C00B53556 /* Marine Steering Test */;
+			targetProxy = 2180037E2225909E00B53556 /* PBXContainerItemProxy */;
+		};
+		2180038A2225909E00B53556 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 218003682225909C00B53556 /* Marine Steering Test */;
+			targetProxy = 218003892225909E00B53556 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		218003702225909C00B53556 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				218003712225909C00B53556 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		218003752225909E00B53556 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				218003762225909E00B53556 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2180038F2225909E00B53556 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		218003902225909E00B53556 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		218003922225909E00B53556 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TACLQUSF4P;
+				INFOPLIST_FILE = "Marine Steering Test/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Lawrence-Berry.Marine-Steering-Test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		218003932225909E00B53556 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TACLQUSF4P;
+				INFOPLIST_FILE = "Marine Steering Test/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Lawrence-Berry.Marine-Steering-Test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		218003952225909E00B53556 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TACLQUSF4P;
+				INFOPLIST_FILE = "Marine Steering TestTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Lawrence-Berry.Marine-Steering-TestTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Marine Steering Test.app/Marine Steering Test";
+			};
+			name = Debug;
+		};
+		218003962225909E00B53556 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TACLQUSF4P;
+				INFOPLIST_FILE = "Marine Steering TestTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Lawrence-Berry.Marine-Steering-TestTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Marine Steering Test.app/Marine Steering Test";
+			};
+			name = Release;
+		};
+		218003982225909E00B53556 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TACLQUSF4P;
+				INFOPLIST_FILE = "Marine Steering TestUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Lawrence-Berry.Marine-Steering-TestUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Marine Steering Test";
+			};
+			name = Debug;
+		};
+		218003992225909E00B53556 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TACLQUSF4P;
+				INFOPLIST_FILE = "Marine Steering TestUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Lawrence-Berry.Marine-Steering-TestUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Marine Steering Test";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		218003642225909C00B53556 /* Build configuration list for PBXProject "Marine Steering Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2180038F2225909E00B53556 /* Debug */,
+				218003902225909E00B53556 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		218003912225909E00B53556 /* Build configuration list for PBXNativeTarget "Marine Steering Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				218003922225909E00B53556 /* Debug */,
+				218003932225909E00B53556 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		218003942225909E00B53556 /* Build configuration list for PBXNativeTarget "Marine Steering TestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				218003952225909E00B53556 /* Debug */,
+				218003962225909E00B53556 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		218003972225909E00B53556 /* Build configuration list for PBXNativeTarget "Marine Steering TestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				218003982225909E00B53556 /* Debug */,
+				218003992225909E00B53556 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 218003612225909C00B53556 /* Project object */;
+}
