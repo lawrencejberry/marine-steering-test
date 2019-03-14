@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		2180036D2225909C00B53556 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2180036C2225909C00B53556 /* AppDelegate.swift */; };
-		2180036F2225909C00B53556 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2180036E2225909C00B53556 /* ViewController.swift */; };
+		2180036F2225909C00B53556 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2180036E2225909C00B53556 /* MainViewController.swift */; };
 		218003722225909C00B53556 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 218003702225909C00B53556 /* Main.storyboard */; };
 		218003742225909E00B53556 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 218003732225909E00B53556 /* Assets.xcassets */; };
 		218003772225909E00B53556 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 218003752225909E00B53556 /* LaunchScreen.storyboard */; };
 		218003822225909E00B53556 /* Marine_Steering_TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218003812225909E00B53556 /* Marine_Steering_TestTests.swift */; };
 		2180038D2225909E00B53556 /* Marine_Steering_TestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2180038C2225909E00B53556 /* Marine_Steering_TestUITests.swift */; };
 		21D8332D2227051B0050496A /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D8332C2227051B0050496A /* LocationService.swift */; };
+		ABBBBE28222DD65800ED1B5A /* BluetoothSerial.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBBBE27222DD65800ED1B5A /* BluetoothSerial.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		210C69AE223A5CF200BF8E20 /* Marine Steering Test.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Marine Steering Test.entitlements"; sourceTree = "<group>"; };
 		218003692225909C00B53556 /* Marine Steering Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Marine Steering Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2180036C2225909C00B53556 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2180036E2225909C00B53556 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2180036E2225909C00B53556 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		218003712225909C00B53556 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		218003732225909E00B53556 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		218003762225909E00B53556 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +51,7 @@
 		2180038C2225909E00B53556 /* Marine_Steering_TestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marine_Steering_TestUITests.swift; sourceTree = "<group>"; };
 		2180038E2225909E00B53556 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21D8332C2227051B0050496A /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		ABBBBE27222DD65800ED1B5A /* BluetoothSerial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothSerial.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +102,10 @@
 		2180036B2225909C00B53556 /* Marine Steering Test */ = {
 			isa = PBXGroup;
 			children = (
+				210C69AE223A5CF200BF8E20 /* Marine Steering Test.entitlements */,
 				2180036C2225909C00B53556 /* AppDelegate.swift */,
-				2180036E2225909C00B53556 /* ViewController.swift */,
+				2180036E2225909C00B53556 /* MainViewController.swift */,
+				ABBBBE27222DD65800ED1B5A /* BluetoothSerial.swift */,
 				218003702225909C00B53556 /* Main.storyboard */,
 				218003732225909E00B53556 /* Assets.xcassets */,
 				218003752225909E00B53556 /* LaunchScreen.storyboard */,
@@ -196,6 +201,14 @@
 				TargetAttributes = {
 					218003682225909C00B53556 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+						};
 					};
 					2180037C2225909E00B53556 = {
 						CreatedOnToolsVersion = 10.1;
@@ -259,8 +272,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2180036F2225909C00B53556 /* ViewController.swift in Sources */,
+				2180036F2225909C00B53556 /* MainViewController.swift in Sources */,
 				21D8332D2227051B0050496A /* LocationService.swift in Sources */,
+				ABBBBE28222DD65800ED1B5A /* BluetoothSerial.swift in Sources */,
 				2180036D2225909C00B53556 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -435,7 +449,10 @@
 		218003922225909E00B53556 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Marine Steering Test/Marine Steering Test.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TACLQUSF4P;
 				INFOPLIST_FILE = "Marine Steering Test/Info.plist";
@@ -443,8 +460,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Lawrence-Berry.Marine-Steering-Test";
+				PRODUCT_BUNDLE_IDENTIFIER = "Lawrence.Marine-Steering-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -453,7 +471,10 @@
 		218003932225909E00B53556 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Marine Steering Test/Marine Steering Test.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TACLQUSF4P;
 				INFOPLIST_FILE = "Marine Steering Test/Info.plist";
@@ -461,8 +482,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Lawrence-Berry.Marine-Steering-Test";
+				PRODUCT_BUNDLE_IDENTIFIER = "Lawrence.Marine-Steering-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

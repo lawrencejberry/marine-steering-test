@@ -10,18 +10,145 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Marine_Steering_Test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Marine_Steering_Test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ebi-GH-C9B">
-                                <rect key="frame" x="50" y="20" width="78" height="39"/>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter file name here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="84m-Rf-Sv4">
+                                <rect key="frame" x="332" y="19" width="315" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fD5-cp-aow">
+                                <rect key="frame" x="30" y="99" width="133" height="39"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="78" id="roW-Wq-bNp"/>
+                                    <constraint firstAttribute="height" constant="39" id="HJp-Hi-hFH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Bow side pressure"/>
+                                <connections>
+                                    <action selector="button1Tapped:" destination="BYZ-38-t0r" eventType="touchDown" id="Fax-bP-OA1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zZF-IX-0eG">
+                                <rect key="frame" x="193" y="99" width="149" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Stroke side pressure"/>
+                                <connections>
+                                    <action selector="button2Tapped:" destination="BYZ-38-t0r" eventType="touchDown" id="4KD-ub-ugF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJ5-qU-sdW">
+                                <rect key="frame" x="362" y="99" width="129" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Bow take a stroke"/>
+                                <connections>
+                                    <action selector="button3Tapped:" destination="BYZ-38-t0r" eventType="touchDown" id="Zc6-iW-0LJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x8z-OY-kKd">
+                                <rect key="frame" x="30" y="171" width="130" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Bow pair paddling"/>
+                                <connections>
+                                    <action selector="button5Tapped:" destination="BYZ-38-t0r" eventType="touchDown" id="E6b-ny-rkB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pTP-3P-GJH">
+                                <rect key="frame" x="30" y="236" width="117" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="SS take a stroke"/>
+                                <connections>
+                                    <action selector="button9Tapped:" destination="BYZ-38-t0r" eventType="touchDown" id="SBN-lR-mei"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0wf-A3-8zB">
+                                <rect key="frame" x="166" y="236" width="117" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="BS back it down"/>
+                                <connections>
+                                    <action selector="button10Tapped:" destination="BYZ-38-t0r" eventType="touchDown" id="Teb-MB-S9Z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oba-ZB-OUg">
+                                <rect key="frame" x="306" y="236" width="116" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="SS back it down"/>
+                                <connections>
+                                    <action selector="button11Tapped:" destination="BYZ-38-t0r" eventType="touchDown" id="J4o-qt-obV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdc-Oa-ZAG">
+                                <rect key="frame" x="440" y="236" width="175" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Stroke pair back it down"/>
+                                <connections>
+                                    <action selector="button12Tapped:" destination="BYZ-38-t0r" eventType="touchDown" id="jde-6e-TWR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgw-GC-FvF">
+                                <rect key="frame" x="179" y="171" width="144" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Stroke back it down"/>
+                                <connections>
+                                    <action selector="button6Tapped:" destination="BYZ-38-t0r" eventType="touchDown" id="oA3-Zf-PvL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hok-7V-VVO">
+                                <rect key="frame" x="337" y="171" width="106" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="7 back it down"/>
+                                <connections>
+                                    <action selector="button7Tapped:" destination="BYZ-38-t0r" eventType="touchDown" id="gp0-EM-DTW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iyS-A5-dc8">
+                                <rect key="frame" x="517" y="102.5" width="120" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="2 taking a stroke"/>
+                                <connections>
+                                    <action selector="button4Tapped:" destination="BYZ-38-t0r" eventType="touchDown" id="HRo-S9-P2v"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-30" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="Mek-vM-tTR">
+                                <rect key="frame" x="38" y="305" width="591" height="31"/>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="TDD-BE-n0F"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ic-LD-Ygc">
+                                <rect key="frame" x="23" y="19" width="94" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="94" id="Wwe-Og-E6o"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Connect"/>
+                                <state key="selected" title="Connecting"/>
+                                <connections>
+                                    <action selector="ConnectTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O2Z-aU-c96"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PYd-Mx-NQf">
+                                <rect key="frame" x="134" y="19" width="78" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="78" id="Enc-n5-bOk"/>
+                                </constraints>
+                                <state key="normal" title="Disconnect">
+                                    <color key="titleColor" red="1" green="0.23502575249999999" blue="0.30141066230000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="DisconnectTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N7r-vT-PfT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ebi-GH-C9B">
+                                <rect key="frame" x="220" y="15" width="78" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="78" id="EXa-VF-Css"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Start"/>
@@ -30,75 +157,123 @@
                                     <action selector="startStopTapped:" destination="BYZ-38-t0r" eventType="touchDown" id="RJg-pB-0PM"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter file name here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="84m-Rf-Sv4">
-                                <rect key="frame" x="178" y="20" width="469" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Range" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tfk-NP-TIg">
+                                <rect key="frame" x="442" y="64" width="85" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="eYo-oq-yZf"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fD5-cp-aow">
-                                <rect key="frame" x="50" y="99" width="79" height="39"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Button 1"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zZF-IX-0eG">
-                                <rect key="frame" x="169" y="99" width="81" height="39"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Button 2"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJ5-qU-sdW">
-                                <rect key="frame" x="290" y="99" width="82" height="39"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Button 3"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x8z-OY-kKd">
-                                <rect key="frame" x="534" y="99" width="82" height="39"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Button 5"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iyS-A5-dc8">
-                                <rect key="frame" x="412" y="99" width="82" height="39"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Button 4"/>
-                            </button>
-                            <slider opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-30" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="Mek-vM-tTR">
-                                <rect key="frame" x="38" y="305" width="591" height="31"/>
                                 <connections>
-                                    <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="TDD-BE-n0F"/>
+                                    <action selector="rangeChanged:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="vcG-gQ-6Cu"/>
                                 </connections>
-                            </slider>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Offset" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="odR-G7-sIg">
+                                <rect key="frame" x="562" y="64" width="85" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="Ccn-e0-fnr"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="offsetChanged:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="pge-nN-OT1"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Enter only integer values" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ti0-yd-xso">
+                                <rect key="frame" x="332" y="66" width="90" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="qn0-jB-f7d"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ynR-zV-oUy">
+                                <rect key="frame" x="463" y="171" width="163" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Bow side take a stroke"/>
+                                <connections>
+                                    <action selector="button8Tapped:" destination="BYZ-38-t0r" eventType="touchDown" id="Qhb-zf-xfz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="nJ5-qU-sdW" firstAttribute="leading" secondItem="zZF-IX-0eG" secondAttribute="trailing" constant="40" id="59W-b6-v1C"/>
-                            <constraint firstItem="nJ5-qU-sdW" firstAttribute="centerY" secondItem="zZF-IX-0eG" secondAttribute="centerY" id="ALe-Ap-iO7"/>
-                            <constraint firstItem="iyS-A5-dc8" firstAttribute="leading" secondItem="nJ5-qU-sdW" secondAttribute="trailing" constant="40" id="Oxm-Qr-0Ji"/>
-                            <constraint firstItem="zZF-IX-0eG" firstAttribute="centerY" secondItem="fD5-cp-aow" secondAttribute="centerY" id="SMv-Pu-XnD"/>
-                            <constraint firstItem="Ebi-GH-C9B" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Shu-ge-p2e"/>
-                            <constraint firstItem="x8z-OY-kKd" firstAttribute="leading" secondItem="iyS-A5-dc8" secondAttribute="trailing" constant="40" id="V4I-Bh-Nyx"/>
-                            <constraint firstItem="Ebi-GH-C9B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Wnh-1r-g18"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="84m-Rf-Sv4" secondAttribute="trailing" constant="20" id="Y4h-pf-SWV"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Mek-vM-tTR" secondAttribute="bottom" constant="40" id="YT7-Ra-1bu"/>
-                            <constraint firstItem="fD5-cp-aow" firstAttribute="top" secondItem="Ebi-GH-C9B" secondAttribute="bottom" constant="40" id="Yk4-CF-YOW"/>
-                            <constraint firstItem="Mek-vM-tTR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cIY-9v-NdO"/>
-                            <constraint firstItem="Mek-vM-tTR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="f9y-Lw-Do8"/>
-                            <constraint firstItem="84m-Rf-Sv4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="fB8-nM-QLO"/>
-                            <constraint firstItem="84m-Rf-Sv4" firstAttribute="leading" secondItem="Ebi-GH-C9B" secondAttribute="trailing" constant="50" id="iVf-4d-dNX"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mek-vM-tTR" secondAttribute="trailing" constant="40" id="lVE-wj-BWD"/>
-                            <constraint firstItem="fD5-cp-aow" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="mKL-5H-Qb6"/>
-                            <constraint firstItem="x8z-OY-kKd" firstAttribute="centerY" secondItem="iyS-A5-dc8" secondAttribute="centerY" id="mqA-jB-Try"/>
-                            <constraint firstItem="zZF-IX-0eG" firstAttribute="leading" secondItem="fD5-cp-aow" secondAttribute="trailing" constant="40" id="rOO-0k-jLh"/>
-                            <constraint firstItem="iyS-A5-dc8" firstAttribute="centerY" secondItem="nJ5-qU-sdW" secondAttribute="centerY" id="wEX-lK-eXj"/>
+                            <constraint firstItem="vdc-Oa-ZAG" firstAttribute="leading" secondItem="Oba-ZB-OUg" secondAttribute="trailing" constant="18" id="0pF-W3-kBJ"/>
+                            <constraint firstItem="pTP-3P-GJH" firstAttribute="centerY" secondItem="0wf-A3-8zB" secondAttribute="centerY" id="19X-xl-qQg"/>
+                            <constraint firstItem="8ic-LD-Ygc" firstAttribute="baseline" secondItem="PYd-Mx-NQf" secondAttribute="firstBaseline" id="4mH-0g-Eah"/>
+                            <constraint firstItem="Ebi-GH-C9B" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="5Ev-kQ-puI"/>
+                            <constraint firstItem="tfk-NP-TIg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ti0-yd-xso" secondAttribute="trailing" constant="30" id="5Fk-Jg-XK2"/>
+                            <constraint firstItem="ti0-yd-xso" firstAttribute="top" secondItem="84m-Rf-Sv4" secondAttribute="bottom" constant="17" id="5dg-wg-OUL"/>
+                            <constraint firstItem="8ic-LD-Ygc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="23" id="5zg-zn-d5a"/>
+                            <constraint firstItem="fD5-cp-aow" firstAttribute="top" secondItem="zZF-IX-0eG" secondAttribute="top" id="68E-Cm-xwe"/>
+                            <constraint firstItem="pTP-3P-GJH" firstAttribute="top" secondItem="x8z-OY-kKd" secondAttribute="bottom" constant="33" id="9pU-4W-hIg"/>
+                            <constraint firstItem="fD5-cp-aow" firstAttribute="top" secondItem="8ic-LD-Ygc" secondAttribute="bottom" constant="49" id="CWp-fl-gLH"/>
+                            <constraint firstItem="odR-G7-sIg" firstAttribute="trailing" secondItem="84m-Rf-Sv4" secondAttribute="trailing" id="DWq-bs-7OL"/>
+                            <constraint firstItem="Ebi-GH-C9B" firstAttribute="leading" secondItem="PYd-Mx-NQf" secondAttribute="trailing" constant="8" symbolic="YES" id="ETA-mg-f1z"/>
+                            <constraint firstItem="zZF-IX-0eG" firstAttribute="bottom" secondItem="nJ5-qU-sdW" secondAttribute="bottom" id="En2-JN-bkT"/>
+                            <constraint firstItem="ti0-yd-xso" firstAttribute="leading" secondItem="84m-Rf-Sv4" secondAttribute="leading" id="FA8-Y1-cAT"/>
+                            <constraint firstItem="84m-Rf-Sv4" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="I12-c8-9FJ"/>
+                            <constraint firstItem="x8z-OY-kKd" firstAttribute="centerY" secondItem="bgw-GC-FvF" secondAttribute="centerY" id="JUY-y5-IMa"/>
+                            <constraint firstItem="x8z-OY-kKd" firstAttribute="top" secondItem="fD5-cp-aow" secondAttribute="bottom" constant="33" id="LEs-tE-e7O"/>
+                            <constraint firstItem="Ebi-GH-C9B" firstAttribute="centerY" secondItem="84m-Rf-Sv4" secondAttribute="centerY" id="LRX-H8-hQr"/>
+                            <constraint firstItem="iyS-A5-dc8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="nJ5-qU-sdW" secondAttribute="trailing" constant="20" id="Lc8-xX-vua"/>
+                            <constraint firstItem="nJ5-qU-sdW" firstAttribute="top" secondItem="84m-Rf-Sv4" secondAttribute="bottom" constant="50" id="O3r-3s-J9G"/>
+                            <constraint firstItem="pTP-3P-GJH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="OQ7-fQ-Fet"/>
+                            <constraint firstItem="fD5-cp-aow" firstAttribute="baseline" secondItem="zZF-IX-0eG" secondAttribute="baseline" id="Oce-1M-dGo"/>
+                            <constraint firstItem="fD5-cp-aow" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="OtR-no-L7F"/>
+                            <constraint firstItem="nJ5-qU-sdW" firstAttribute="baseline" secondItem="iyS-A5-dc8" secondAttribute="baseline" id="PPv-QI-dty"/>
+                            <constraint firstItem="zZF-IX-0eG" firstAttribute="leading" secondItem="fD5-cp-aow" secondAttribute="trailing" constant="30" id="QOo-tp-za2"/>
+                            <constraint firstItem="0wf-A3-8zB" firstAttribute="leading" secondItem="pTP-3P-GJH" secondAttribute="trailing" constant="19" id="Rbg-zI-6L3"/>
+                            <constraint firstItem="Mek-vM-tTR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="Rhg-kC-XKY"/>
+                            <constraint firstItem="0wf-A3-8zB" firstAttribute="centerY" secondItem="Oba-ZB-OUg" secondAttribute="centerY" id="SZW-6F-5hw"/>
+                            <constraint firstItem="Mek-vM-tTR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="U3j-Ch-Fy1"/>
+                            <constraint firstItem="odR-G7-sIg" firstAttribute="centerY" secondItem="tfk-NP-TIg" secondAttribute="centerY" id="Wrb-v9-0Iq"/>
+                            <constraint firstItem="zZF-IX-0eG" firstAttribute="baseline" secondItem="nJ5-qU-sdW" secondAttribute="firstBaseline" id="Znx-BF-feN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iyS-A5-dc8" secondAttribute="trailing" constant="30" id="apU-sd-Axg"/>
+                            <constraint firstItem="PYd-Mx-NQf" firstAttribute="leading" secondItem="8ic-LD-Ygc" secondAttribute="trailing" constant="17" id="asT-IN-ktC"/>
+                            <constraint firstItem="Hok-7V-VVO" firstAttribute="centerY" secondItem="ynR-zV-oUy" secondAttribute="centerY" id="bgj-iH-Mpb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Mek-vM-tTR" secondAttribute="bottom" constant="40" id="bqy-Lr-Ehd"/>
+                            <constraint firstItem="84m-Rf-Sv4" firstAttribute="leading" secondItem="Ebi-GH-C9B" secondAttribute="trailing" constant="34" id="cF3-xN-wgK"/>
+                            <constraint firstItem="PYd-Mx-NQf" firstAttribute="centerY" secondItem="Ebi-GH-C9B" secondAttribute="centerY" id="eDu-Tt-2eV"/>
+                            <constraint firstItem="bgw-GC-FvF" firstAttribute="leading" secondItem="x8z-OY-kKd" secondAttribute="trailing" constant="19" id="emc-bA-nsK"/>
+                            <constraint firstItem="fD5-cp-aow" firstAttribute="baseline" secondItem="zZF-IX-0eG" secondAttribute="firstBaseline" id="glE-iI-0Zo"/>
+                            <constraint firstItem="nJ5-qU-sdW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zZF-IX-0eG" secondAttribute="trailing" constant="20" id="h7p-hk-SAa"/>
+                            <constraint firstItem="bgw-GC-FvF" firstAttribute="centerY" secondItem="Hok-7V-VVO" secondAttribute="centerY" id="hT3-cL-BKq"/>
+                            <constraint firstItem="Oba-ZB-OUg" firstAttribute="leading" secondItem="0wf-A3-8zB" secondAttribute="trailing" constant="23" id="ipq-Gk-BZQ"/>
+                            <constraint firstItem="84m-Rf-Sv4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="19" id="kRl-p2-fv4"/>
+                            <constraint firstItem="ti0-yd-xso" firstAttribute="centerY" secondItem="tfk-NP-TIg" secondAttribute="centerY" id="kYC-Kc-hxL"/>
+                            <constraint firstItem="zZF-IX-0eG" firstAttribute="baseline" secondItem="fD5-cp-aow" secondAttribute="firstBaseline" id="lVb-cJ-YEY"/>
+                            <constraint firstItem="ynR-zV-oUy" firstAttribute="leading" secondItem="Hok-7V-VVO" secondAttribute="trailing" constant="20" id="ojv-EI-AGB"/>
+                            <constraint firstItem="8ic-LD-Ygc" firstAttribute="top" secondItem="PYd-Mx-NQf" secondAttribute="top" id="rKa-v3-iNQ"/>
+                            <constraint firstItem="Hok-7V-VVO" firstAttribute="leading" secondItem="bgw-GC-FvF" secondAttribute="trailing" constant="14" id="tg0-bK-TRI"/>
+                            <constraint firstItem="zZF-IX-0eG" firstAttribute="baseline" secondItem="nJ5-qU-sdW" secondAttribute="baseline" id="u3J-B1-5BI"/>
+                            <constraint firstItem="Oba-ZB-OUg" firstAttribute="centerY" secondItem="vdc-Oa-ZAG" secondAttribute="centerY" id="uxh-Z5-uHH"/>
+                            <constraint firstItem="zZF-IX-0eG" firstAttribute="top" secondItem="Ebi-GH-C9B" secondAttribute="bottom" constant="45" id="xDv-OV-r73"/>
+                            <constraint firstItem="x8z-OY-kKd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="zg2-XP-zrx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="Button1" destination="fD5-cp-aow" id="ocR-vT-8cI"/>
-                        <outlet property="Button2" destination="zZF-IX-0eG" id="J3T-Pv-uSV"/>
-                        <outlet property="Button3" destination="nJ5-qU-sdW" id="9bu-8J-CB3"/>
-                        <outlet property="Button4" destination="iyS-A5-dc8" id="8Zr-lc-s9V"/>
-                        <outlet property="Button5" destination="x8z-OY-kKd" id="iTL-B1-3aQ"/>
+                        <outlet property="ConnectButton" destination="8ic-LD-Ygc" id="mng-BY-X3X"/>
+                        <outlet property="DisconnectButton" destination="PYd-Mx-NQf" id="eCw-h8-7JQ"/>
+                        <outlet property="button1" destination="fD5-cp-aow" id="epG-dW-C0p"/>
+                        <outlet property="button10" destination="0wf-A3-8zB" id="Qgh-Q5-4LP"/>
+                        <outlet property="button11" destination="Oba-ZB-OUg" id="zbv-YR-NRK"/>
+                        <outlet property="button12" destination="vdc-Oa-ZAG" id="Utc-0j-ilF"/>
+                        <outlet property="button2" destination="zZF-IX-0eG" id="OEh-h4-BFJ"/>
+                        <outlet property="button3" destination="nJ5-qU-sdW" id="xII-az-BSt"/>
+                        <outlet property="button4" destination="iyS-A5-dc8" id="vRf-Vj-8Zj"/>
+                        <outlet property="button5" destination="x8z-OY-kKd" id="zRP-LY-bQQ"/>
+                        <outlet property="button6" destination="bgw-GC-FvF" id="Jwo-zz-flB"/>
+                        <outlet property="button7" destination="Hok-7V-VVO" id="CoN-6n-TYA"/>
+                        <outlet property="button8" destination="ynR-zV-oUy" id="F12-Os-SDr"/>
+                        <outlet property="button9" destination="pTP-3P-GJH" id="VVb-Dn-gbg"/>
                         <outlet property="fileTextField" destination="84m-Rf-Sv4" id="9eY-MR-POW"/>
+                        <outlet property="offsetField" destination="odR-G7-sIg" id="2hd-5G-us8"/>
+                        <outlet property="rangeField" destination="tfk-NP-TIg" id="Wmm-mS-eAJ"/>
                         <outlet property="rudderAngleSlider" destination="Mek-vM-tTR" id="thJ-6C-Ym7"/>
                         <outlet property="startStopButton" destination="Ebi-GH-C9B" id="7rL-Jh-dg7"/>
                     </connections>
