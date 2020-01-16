@@ -126,32 +126,42 @@ final class MainViewController: UIViewController, LocationServiceDelegate, UITex
             heading_file_URL = dir.appendingPathComponent(heading_file)
             rudder_file_URL = dir.appendingPathComponent(rudder_file)
             command_file_URL = dir.appendingPathComponent(command_file)
+            
+            let file_manager = FileManager.default
+            
+            let location_entries = "lat,lon,timestamp\n"
+            let heading_entries = "heading,timestamp\n"
+            let rudder_entries = "angle,timestamp\n"
+            let command_entries = "command,timestamp\n"
+            
+            if !file_manager.fileExists(atPath: location_file_URL.path) {
+                do {
+                    try location_entries.write(to: location_file_URL, atomically: false, encoding: .utf8)
+                }
+                catch {print("Could not create file")}
+            }
+            
+            if !file_manager.fileExists(atPath: heading_file_URL.path) {
+                do {
+                    try heading_entries.write(to: heading_file_URL, atomically: false, encoding: .utf8)
+                }
+                catch {print("Could not create file")}
+            }
+            
+            if !file_manager.fileExists(atPath: rudder_file_URL.path) {
+                do {
+                    try rudder_entries.write(to: rudder_file_URL, atomically: false, encoding: .utf8)
+                }
+                catch {print("Could not create file")}
+            }
+            
+            if !file_manager.fileExists(atPath: command_file_URL.path) {
+                do {
+                    try command_entries.write(to: command_file_URL, atomically: false, encoding: .utf8)
+                }
+                catch {print("Could not create file")}
+            }
         }
-        
-        let location_entries = "lat,lon,timestamp\n"
-        let heading_entries = "heading,timestamp\n"
-        let rudder_entries = "angle,timestamp\n"
-        let command_entries = "command,timestamp\n"
-
-        do {
-            try location_entries.write(to: location_file_URL, atomically: false, encoding: .utf8)
-        }
-        catch {print("Could not create file")}
-        
-        do {
-            try heading_entries.write(to: heading_file_URL, atomically: false, encoding: .utf8)
-        }
-        catch {print("Could not create file")}
-        
-        do {
-            try rudder_entries.write(to: rudder_file_URL, atomically: false, encoding: .utf8)
-        }
-        catch {print("Could not create file")}
-        
-        do {
-            try command_entries.write(to: command_file_URL, atomically: false, encoding: .utf8)
-        }
-        catch {print("Could not create file")}
     }
     
     func startRecording() {
@@ -192,8 +202,8 @@ final class MainViewController: UIViewController, LocationServiceDelegate, UITex
     }
     
     func tracingLocation(_ currentLocation: CLLocation) {
-        let lat = String(format:"%.2f", currentLocation.coordinate.latitude)
-        let lon = String(format:"%.2f", currentLocation.coordinate.longitude)
+        let lat = String(format:"%.6f", currentLocation.coordinate.latitude)
+        let lon = String(format:"%.6f", currentLocation.coordinate.longitude)
         let timestamp = time_formatter.string(from: currentLocation.timestamp)
         let entry = lat+","+lon+","+timestamp+"\n"
         //writing
